@@ -32,7 +32,7 @@ describe Airport do
     expect{airport.land(plane)}.to raise_error 'Weather is stormy'
   end
 
-  it 'raises when the airport is full' do
+  it 'raises error when the airport is full' do
     airport = Airport.new
     plane = Plane.new
     allow(airport).to receive(:randomWeather).and_return('clear')
