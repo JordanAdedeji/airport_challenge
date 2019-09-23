@@ -1,8 +1,7 @@
 module Weather
   def randomWeather
-    weather = %w[sunny sunny sunny sunny sunny clear
-      clear rainy stormy]
-
+    weather = %w[sunny bright grey showers warm clear
+      cold rainy stormy]
     weather[rand(9)]
   end
 end

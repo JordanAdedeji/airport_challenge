@@ -4,7 +4,7 @@ require_relative 'weather'
 class Airport
 
   attr_reader :planes
-  attr_reader :weather
+  attr_accessor :weather
 
   include Weather
 
@@ -26,11 +26,3 @@ class Airport
   end
 
 end
-
-airport = Airport.new
-plane = Plane.new
-4.times {airport.land Plane.new}
-airport.land(plane)
-b1 = airport.takeoff(plane)
-
-puts airport.planes
