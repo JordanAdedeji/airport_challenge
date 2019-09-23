@@ -4,7 +4,6 @@ require_relative 'weather'
 class Airport
 
   attr_reader :planes
-  attr_reader :weather
 
   include Weather
 
