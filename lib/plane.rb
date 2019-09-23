@@ -1,5 +1,5 @@
 class Plane
-  def flying
+  def working
     true
   end
 end

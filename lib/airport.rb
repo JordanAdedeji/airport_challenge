@@ -4,7 +4,7 @@ require_relative 'weather'
 class Airport
 
   attr_reader :planes
-  attr_accessor :weather
+  attr_reader :weather
 
   include Weather
 
@@ -13,16 +13,18 @@ class Airport
   end
 
   def land(plane)
-    @weather = randomWeather
+    @weather = random_weather
     fail 'Weather is stormy' if @weather == "stormy"
     fail 'Airport is full' if @planes.length >= 5
-      @planes << plane
+
+    @planes << plane
   end
 
   def takeoff(plane)
-    @weather = randomWeather
+    @weather = random_weather
     fail 'Weather is stormy' if @weather == "stormy"
-      @planes.delete(plane)
+
+    @planes.delete(plane)
   end
 
 end
